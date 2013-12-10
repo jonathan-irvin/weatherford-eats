@@ -241,25 +241,23 @@ jQuery(document).ready(function() {
                 <h2 class="TzFilter">Filter<span></span></h2>
                 <ul id="filter" class="option-set clearfix" data-option-key="filter">
                   <li><a href="#show-all" data-option-value="*" class="selected"><em>Show all</em></a></li>
-                  <li> <a href="#Drawing" data-option-value=".Drawing"> <em>Drawing</em> </a> </li>
-                  <li> <a href="#Illustration" data-option-value=".Illustration"> <em>Illustration</em> </a> </li>
-                  <li> <a href="#Stock" data-option-value=".Stock"> <em>Stock</em> </a> </li>
-                  <li> <a href="#Branding" data-option-value=".Branding"> <em>Branding</em> </a> </li>
-                  <li> <a href="#Photography" data-option-value=".Photography"> <em>Photography</em> </a> </li>
-                  <li> <a href="#Video" data-option-value=".Video"> <em>Video</em> </a> </li>
-                  <li> <a href="#Digital" data-option-value=".Digital"> <em>Digital</em> </a> </li>
-                  <li> <a href="#Decoration" data-option-value=".Decoration"> <em>Decoration</em> </a> </li>
-                  <li> <a href="#Architect" data-option-value=".Architect"> <em>Architect</em> </a> </li>
+                  <li> <a href="#American" data-option-value=".American"> <em>American</em> </a> </li>
+                  <li> <a href="#Bakery" data-option-value=".Bakery"> <em>Bakery</em> </a> </li>
+                  <li> <a href="#BBQ" data-option-value=".BBQ"> <em>BBQ</em> </a> </li>
+                  <li> <a href="#Cafe" data-option-value=".Cafe"> <em>Cafe</em> </a> </li>
+                  <li> <a href="#Italian" data-option-value=".Italian"> <em>Italian</em> </a> </li>
+                  <li> <a href="#Mexican" data-option-value=".Mexican"> <em>Mexican</em> </a> </li>
+                  <li> <a href="#Steakhouse" data-option-value=".Steakhouse"> <em>Steakhouse</em> </a> </li>                  
                 </ul>
               </div>
             </div>
             <div id="portfolio" class="super-list variable-sizes clearfix">
-              <div class="element Branding Digital tz_item">
+              <div class="element American Bakery tz_item">
                 <div class="TzInner">
-                  <div class="TzPortfolioMedia"> <a href="http://cdn.pimg.co/p/800x600/858652/fff/img.png" class="prettyPhoto" rel="prettyPhoto[id]"> <img src="http://cdn.pimg.co/p/400x300/858652/fff/img.png"/>
+                  <div class="TzPortfolioMedia"> <a href="http://placehold.it/400x300&text=Sweetness%20Factory" class="prettyPhoto" rel="prettyPhoto[id]"> <img src="http://placehold.it/400x300&text=Sweetness%20Factory"/>
                     <div class="TzPortfolioDescription">
-                      <h3 class="TzPortfolioTitle name" itemprop="name"> <em>Donec eros mi</em> </h3>
-                      <span class="TzItemTag">Branding + Digital</span>
+                      <h3 class="TzPortfolioTitle name" itemprop="name"> <em>Sweetness Factory</em> </h3>
+                      <span class="TzItemTag">American/Bakery</span>
                       <div class="r_plus "></div>
                     </div>
                     </a> </div>
