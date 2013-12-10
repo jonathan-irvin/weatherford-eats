@@ -25,8 +25,9 @@ class Welcome extends CI_Controller {
 		// $this->load->view('index_content');
 		// $this->load->view('footer');
 		
-		$data['title'] = "Project Name";
-		$this->load->view('under_construction',$data);
+		$data['title'] = "Weatherford Eats";
+		//$this->load->view('under_construction',$data);
+		$this->load->view('index-0',$data);
 	}
 }
 
