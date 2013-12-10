@@ -252,18 +252,7 @@ jQuery(document).ready(function() {
               </div>
             </div>
             <div id="portfolio" class="super-list variable-sizes clearfix">
-              <div class="element American Bakery tz_item">
-                <div class="TzInner">
-                  <div class="TzPortfolioMedia"> <a href="http://placehold.it/400x300&text=Sweetness%20Factory" class="prettyPhoto" rel="prettyPhoto[id]"> <img src="http://placehold.it/400x300&text=Sweetness%20Factory"/>
-                    <div class="TzPortfolioDescription">
-                      <h3 class="TzPortfolioTitle name" itemprop="name"> <em>Sweetness Factory</em> </h3>
-                      <span class="TzItemTag">American/Bakery</span>
-                      <div class="r_plus "></div>
-                    </div>
-                    </a> </div>
-                </div>
-                <!--Inner--> 
-              </div>
+			  <?php echo $restaurants; ?>			  
               <div class="element Drawing Illustration tz_item">
                 <div class="TzInner">
                   <div class="TzPortfolioMedia"> <a href="http://cdn.pimg.co/p/800x600/171666/fff/img.png" class="prettyPhoto" rel="prettyPhoto[id]"> <img src="http://cdn.pimg.co/p/400x300/171666/fff/img.png"/>

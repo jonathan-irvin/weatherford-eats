@@ -6,22 +6,22 @@ class Restaurant {
 	private $name;
 	private $description;	
 	
-    public function __contstruct($name,$tags,$description)
+    public function __construct($params)
     {
-		$name = $this->name;
-		$tags = $this->tags;
-		$description = $this->description;
-    }
+		$this->name 		= $params['name'];
+		$this->tags 		= $params['tags'];
+		$this->description  = $params['description'];
+    }	
 	
 	public function toString()
 	{
-		print "<div id=\"portfolio\" class=\"super-list variable-sizes clearfix\">
-              <div class=\"element American Bakery tz_item\">
+		return "<div id=\"portfolio\" class=\"super-list variable-sizes clearfix\">
+              <div class=\"element $this->tags tz_item\">
                 <div class=\"TzInner\">
-                  <div class=\"TzPortfolioMedia\"> <a href=\"http://placehold.it/400x300&text=$name\" class=\"prettyPhoto\" rel=\"prettyPhoto[id]\"> <img src=\"http://placehold.it/400x300&text=$name\"/>
+                  <div class=\"TzPortfolioMedia\"> <a href=\"http://placehold.it/400x300&text=$this->name\" class=\"prettyPhoto\" rel=\"prettyPhoto[id]\"> <img src=\"http://placehold.it/400x300&text=$this->name\"/>
                     <div class=\"TzPortfolioDescription\">
-                      <h3 class=\"TzPortfolioTitle name\" itemprop=\"name\"> <em>$name</em> </h3>
-                      <span class=\"TzItemTag\">$description</span>
+                      <h3 class=\"TzPortfolioTitle name\" itemprop=\"name\"> <em>$this->name</em> </h3>
+                      <span class=\"TzItemTag\">$this->description</span>
                       <div class=\"r_plus \"></div>
                     </div>
                     </a> </div>
