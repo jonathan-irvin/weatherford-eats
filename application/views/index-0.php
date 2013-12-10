@@ -173,7 +173,7 @@ jQuery(document).ready(function() {
           <!-- logo -->
           <div class="logo">
             <div><a href="index.html"><?php echo $title;?></a></div>
-            <p>Your source for the best eats this side of 66</p>
+            <p>Your source for the best eats in Weatherford</p>
           </div>
           <!-- logo -->
           <div class="clr"></div>
@@ -203,7 +203,7 @@ jQuery(document).ready(function() {
               <div class="clr"></div>
               <p>&copy; Copyright <a href="#"><em><? echo $title; ?></em></a>.<br />
                 All Rights Reserved.<br />
-                Design by <a href="http://www.dreamtemplate.com/" target="_blank" title="Dream Templates">dreamtemplate</a>.</p>
+                Design by <a href="http://www.beacontechsupport.com" target="_blank" title="Beacon Tech Support">Beacon Tech Support</a>.</p>
               <div class="clr"></div>
             </div>
             <div class="clr"></div>
@@ -971,8 +971,8 @@ jQuery(document).ready(function() {
  		 </script>
             <div id="tz_append"> </div>
             <div class="copyright">
-              <p>&copy; Copyright <a href="#"><em>SiteName</em></a>.
-                All Rights Reserved. Design by <a href="http://www.dreamtemplate.com/" target="_blank" title="Dream Templates">dreamtemplate</a>.</p>
+              <p>&copy; Copyright <a href="#"><em><?php echo $title;?></em></a>.
+                All Rights Reserved. Design by <a href="http://www.beacontechsupport.com" target="_blank" title="Beacon Tech Support">Beacon Tech Support</a>.</p>
             </div>
           </div>
         </div>
