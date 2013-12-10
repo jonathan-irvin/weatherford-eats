@@ -9,14 +9,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!-- Mobile Specific Metas  ================================================== -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href="css/style.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="css/menusm.css" />
-<link rel="stylesheet" href="css/layout.css">
-<link rel="stylesheet" href="css/skeleton.css">
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/menusm.js"></script>
-<script type="text/javascript" src="js/scripts.js"></script>
-<script type="text/javascript" src="js/tinynav.min.js"></script>
+<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="assets/css/menusm.css" />
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/skeleton.css">
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/menusm.js"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+<script type="text/javascript" src="assets/js/tinynav.min.js"></script>
 <script type="text/javascript">
 	$(function () {
 		$('#menu-top-menu').tinyNav({
@@ -27,20 +27,20 @@
 </script>
 
 <!-- PrettyPhoto Starts -->
-<link rel="stylesheet" type="text/css" href="prettyPhoto/css/prettyPhoto.css" />
-<script type="text/javascript" src="prettyPhoto/js/jquery.prettyPhoto.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/prettyPhoto/css/prettyPhoto.css" />
+<script type="text/javascript" src="assets/prettyPhoto/js/jquery.prettyPhoto.js"></script>
 <!-- PrettyPhoto Ends -->
 <!-- Preloader Starts -->
-<link href="preloader/css/preloader.css" rel="stylesheet" />
-<script src="preloader/js/jquery.preloader.js" charset="utf-8"></script>
+<link href="assets/preloader/css/preloader.css" rel="stylesheet" />
+<script src="assets/preloader/js/jquery.preloader.js" charset="utf-8"></script>
 <!-- Preloader Ends -->
 <!-- Ui To Top Starts -->
-<link href="ui_totop/css/ui.totop.css" rel="stylesheet" />
-<script src="ui_totop/js/jquery.ui.totop.js" charset="utf-8"></script>
+<link href="assets/ui_totop/css/ui.totop.css" rel="stylesheet" />
+<script src="assets/ui_totop/js/jquery.ui.totop.js" charset="utf-8"></script>
 <!-- Ui To Top Ends -->
 <!-- DC Twitter Starts -->
-<link href="twitter_tweet/jquery.tweet.css" rel="stylesheet" />
-<script src="twitter_tweet/jquery.tweet.js" charset="utf-8"></script>
+<link href="assets/twitter_tweet/jquery.tweet.css" rel="stylesheet" />
+<script src="assets/twitter_tweet/jquery.tweet.js" charset="utf-8"></script>
 
 <!-- DC Twitter End -->
 
@@ -48,13 +48,13 @@
 <!-- jquery.jscrollpane End -->
 
 <!-- Config User Intarface Box Import START -->
-<script type="text/javascript" src="js/head_html_default_block.js"></script>
-<script type="text/javascript" src="js/head_html_block.js"></script>
+<script type="text/javascript" src="assets/js/head_html_default_block.js"></script>
+<script type="text/javascript" src="assets/js/head_html_block.js"></script>
 <!-- Config User Intarface Box Import END -->
 
-<link type="text/css" rel="stylesheet" href="css/jquery.jscrollpane.css"/>
-<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-<script type="text/javascript" src="js/jquery.jscrollpane.js"></script>
+<link type="text/css" rel="stylesheet" href="assets/css/jquery.jscrollpane.css"/>
+<script type="text/javascript" src="assets/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="assets/js/jquery.jscrollpane.js"></script>
 <script type="text/javascript">
 $(function () {
 	$(window).resize(function () {
@@ -91,11 +91,11 @@ jQuery(document).ready(function() {
 	
 });
 </script>
-<link href="css/isotop.css" rel="stylesheet" type="text/css" />
-<link href="css/tz_portfolio.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/isotop.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/tz_portfolio.css" rel="stylesheet" type="text/css" />
 <!-- jQuery -->
-<script type="text/javascript" src="js/jquery.isotope.js"></script><!-- jQuery -->
-<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script><!-- jQuery -->
+<script type="text/javascript" src="assets/js/jquery.isotope.js"></script><!-- jQuery -->
+<script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script><!-- jQuery -->
 
 </head>
 <body>
@@ -180,7 +180,7 @@ jQuery(document).ready(function() {
         </div>
         <!-- menu edit in file "js/menu_html_block.js" -->
         <div class="menu"> 
-          <script type="text/javascript" src="js/menu_html_block.js"></script> 
+          <script type="text/javascript" src="assets/js/menu_html_block.js"></script> 
         </div>
         <!-- /menu -->
         
@@ -189,14 +189,19 @@ jQuery(document).ready(function() {
           <!-- social -->
           <div class="social">
             <div class="social_text">Stay Connected</div>
-            <a href="#"><img src="images/spacer.gif" class="social1" /></a> <a href="#"><img src="images/spacer.gif" class="social2" /></a> <a href="#"><img src="images/spacer.gif" class="social3" /></a> <a href="#"><img src="images/spacer.gif" class="social4" /></a> <a href="#"><img src="images/spacer.gif" class="social5" /></a> <a href="#"><img src="images/spacer.gif" class="social6" /></a></div>
+            <a href="#"><img src="assets/images/spacer.gif" class="social1" /></a> 
+			<a href="#"><img src="assets/images/spacer.gif" class="social2" /></a> 
+			<a href="#"><img src="assets/images/spacer.gif" class="social3" /></a> 
+			<a href="#"><img src="assets/images/spacer.gif" class="social4" /></a> 
+			<a href="#"><img src="assets/images/spacer.gif" class="social5" /></a> 
+			<a href="#"><img src="assets/images/spacer.gif" class="social6" /></a></div>
           <!-- social -->
           <div class="clr"></div>
           <!-- footer -->
           <div class="footer">
             <div class="footer_resize">
               <div class="clr"></div>
-              <p>&copy; Copyright <a href="#"><em>SiteName</em></a>.<br />
+              <p>&copy; Copyright <a href="#"><em><? echo $title; ?></em></a>.<br />
                 All Rights Reserved.<br />
                 Design by <a href="http://www.dreamtemplate.com/" target="_blank" title="Dream Templates">dreamtemplate</a>.</p>
               <div class="clr"></div>
