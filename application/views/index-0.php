@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>(Pro) Responsive Template</title>
+<title><?php echo $title;?></title>
 <meta name="description" content="Enter Your Website Description Here">
 <meta name="keywords" content="website, business, store" />
 <meta name="robots" content="index, follow" />
@@ -172,8 +172,8 @@ jQuery(document).ready(function() {
         <div class="main_menu_top"> 
           <!-- logo -->
           <div class="logo">
-            <div><a href="index.html">Vooveo</a></div>
-            <p>Premium portfolio</p>
+            <div><a href="index.html"><?php echo $title;?></a></div>
+            <p>Your source for the best eats this side of 66</p>
           </div>
           <!-- logo -->
           <div class="clr"></div>
