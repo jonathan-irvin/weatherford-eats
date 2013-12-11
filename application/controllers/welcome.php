@@ -25,9 +25,16 @@ class Welcome extends CI_Controller {
 		// $this->load->view('index_content');
 		// $this->load->view('footer');
 		
-		$this->load->library('restaurant');
+		$config = array(
+			'name' 			=> "Sweetness Factory",
+			'tags' 			=> "American Bakery",
+			'description' 	=> "Sweet"
+			);
+		$this->load->library('restaurant',$config,'sf');
 		
-		$data['title'] = "Weatherford Eats";		
+		
+		$data['title'] = "Weatherford Eats";
+		$data['restaurants'] = $this->sf->toString();
 		$this->load->view('index-0',$data);
 	}
 }
