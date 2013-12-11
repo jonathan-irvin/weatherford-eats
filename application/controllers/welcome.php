@@ -39,14 +39,14 @@ class Welcome extends CI_Controller {
 		$this->load->library('restaurant',array(
 			'name'=>"Sweetness Factory",	
 			'tags'=>"American Bakery",	
-			'menu_url'=>'http://sweetnessfactory.com',
+			'menu_url'=>'http://sweetnessfactory.com/?page_id=156',
 			'image'=>'assets/restaurants/sweetness_factory.png',
 			'description' => "Sweet"),
 			'sf');
 		$this->load->library('restaurant',array(
 			'name'=>"The Stand",			
 			'tags'=>"American International",	
-			'menu_url'=>'http://sweetnessfactory.com',
+			'menu_url'=>'assets/restaurants/menus/stand_menu_full.png',
 			'image'=>'assets/restaurants/the_stand.jpg',
 			'description' => "Awesome sandwiches"),	
 			'stand');
