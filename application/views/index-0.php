@@ -168,7 +168,7 @@ jQuery(document).ready(function() {
   <div class="index_page">
     <div class="main">
       <div class="main_menu opn_mn">
-        <div class="main_menu_button"></div>
+        <!-- <div class="main_menu_button"></div> -->
         <div class="main_menu_top"> 
           <!-- logo -->
           <div class="logo">
@@ -178,23 +178,24 @@ jQuery(document).ready(function() {
           <!-- logo -->
           <div class="clr"></div>
         </div>
-        <!-- menu edit in file "js/menu_html_block.js" -->
+        <!-- menu edit in file "js/menu_html_block.js" 
         <div class="menu"> 
           <script type="text/javascript" src="assets/js/menu_html_block.js"></script> 
         </div>
-        <!-- /menu -->
+         /menu -->
         
         <div class="clr"></div>
         <div class="main_menu_bottom"> 
           <!-- social -->
           <div class="social">
             <div class="social_text">Stay Connected</div>
-            <a href="#"><img src="assets/images/spacer.gif" class="social1" /></a> 
-			<a href="#"><img src="assets/images/spacer.gif" class="social2" /></a> 
-			<a href="#"><img src="assets/images/spacer.gif" class="social3" /></a> 
-			<a href="#"><img src="assets/images/spacer.gif" class="social4" /></a> 
-			<a href="#"><img src="assets/images/spacer.gif" class="social5" /></a> 
-			<a href="#"><img src="assets/images/spacer.gif" class="social6" /></a></div>
+				<a href="#"><img src="assets/images/spacer.gif" class="social1" /></a> 
+				<a href="#"><img src="assets/images/spacer.gif" class="social2" /></a> 
+				<a href="#"><img src="assets/images/spacer.gif" class="social3" /></a> 
+				<a href="#"><img src="assets/images/spacer.gif" class="social4" /></a> 
+				<a href="#"><img src="assets/images/spacer.gif" class="social5" /></a> 
+				<a href="#"><img src="assets/images/spacer.gif" class="social6" /></a>
+			</div>
           <!-- social -->
           <div class="clr"></div>
           <!-- footer -->
@@ -234,7 +235,13 @@ jQuery(document).ready(function() {
               
               <div class="social">
                 <div class="social_text">Stay Connected</div>
-                <a href="#"><img src="images/spacer.gif" class="social1" /></a> <a href="#"><img src="images/spacer.gif" class="social2" /></a> <a href="#"><img src="images/spacer.gif" class="social3" /></a> <a href="#"><img src="images/spacer.gif" class="social4" /></a> <a href="#"><img src="images/spacer.gif" class="social5" /></a> <a href="#"><img src="images/spacer.gif" class="social6" /></a></div>
+                <a href="#"><img src="assets/images/spacer.gif" class="social1" /></a> 
+				<a href="#"><img src="assets/images/spacer.gif" class="social2" /></a> 
+				<a href="#"><img src="assets/images/spacer.gif" class="social3" /></a> 
+				<a href="#"><img src="assets/images/spacer.gif" class="social4" /></a> 
+				<a href="#"><img src="assets/images/spacer.gif" class="social5" /></a> 
+				<a href="#"><img src="assets/images/spacer.gif" class="social6" /></a>
+			  </div>
             </div>
             <div id="tz_options" class="clearfix">
               <div class="option-combo">
