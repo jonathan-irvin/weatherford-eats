@@ -25,17 +25,40 @@ class Welcome extends CI_Controller {
 		// $this->load->view('index_content');
 		// $this->load->view('footer');
 		
-		$config = array(
-			'name' 			=> "Sweetness Factory",
-			'tags' 			=> "American Bakery",
-			'description' 	=> "Sweet"
-			);
-		$this->load->library('restaurant',$config,'sf');
+		
+		
 		
 		
 		$data['title'] = "Weatherford Eats";
-		$data['restaurants'] = $this->sf->toString();
+		$data['restaurants'] = $this->generate();
 		$this->load->view('index-0',$data);
+	}
+	
+	private function generate()
+	{
+		$this->load->library('restaurant',array(
+			'name'=>"Sweetness Factory",	
+			'tags'=>"American Bakery",	
+			'menu_url'=>'http://sweetnessfactory.com',
+			'image'=>'assets/restaurants/sweetness_factory.png',
+			'description' => "Sweet"),
+			'sf');
+		$this->load->library('restaurant',array(
+			'name'=>"The Stand",			
+			'tags'=>"American International",	
+			'menu_url'=>'http://sweetnessfactory.com',
+			'image'=>'assets/restaurants/the_stand.jpg',
+			'description' => "Awesome sandwiches"),	
+			'stand');
+		
+		
+	
+		$restaurants = array(
+			$this->sf->toString(),
+			$this->stand->toString()
+		);		
+		
+		return $restaurants;
 	}
 }
 
