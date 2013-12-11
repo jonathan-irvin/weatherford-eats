@@ -26,9 +26,9 @@ class Welcome extends CI_Controller {
 		// $this->load->view('footer');
 		
 		$config = array(
-			'name' => "Sweetness Factory",
-			'tags' => "American Bakery",
-			'description' => "Sweet"
+			'name' 			=> "Sweetness Factory",
+			'tags' 			=> "American Bakery",
+			'description' 	=> "Sweet"
 			);
 		$this->load->library('restaurant',$config,'sf');
 		
