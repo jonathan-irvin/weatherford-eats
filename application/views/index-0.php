@@ -9,6 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!-- Mobile Specific Metas  ================================================== -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="assets/css/menusm.css" />
 <link rel="stylesheet" href="assets/css/layout.css">
@@ -186,7 +187,7 @@ jQuery(document).ready(function() {
         
         <div class="clr"></div>
         <div class="main_menu_bottom"> 
-          <!-- social -->
+          <!-- social 
           <div class="social">
             <div class="social_text">Stay Connected</div>
 				<a href="#"><img src="assets/images/spacer.gif" class="social1" /></a> 
@@ -233,6 +234,7 @@ jQuery(document).ready(function() {
               </div>
               <!-- /menu -->
               
+			  <!--
               <div class="social">
                 <div class="social_text">Stay Connected</div>
                 <a href="#"><img src="assets/images/spacer.gif" class="social1" /></a> 
@@ -242,6 +244,7 @@ jQuery(document).ready(function() {
 				<a href="#"><img src="assets/images/spacer.gif" class="social5" /></a> 
 				<a href="#"><img src="assets/images/spacer.gif" class="social6" /></a>
 			  </div>
+			  -->
             </div>
             <div id="tz_options" class="clearfix">
               <div class="option-combo">
