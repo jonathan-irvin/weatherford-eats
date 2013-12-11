@@ -238,16 +238,22 @@ jQuery(document).ready(function() {
             </div>
             <div id="tz_options" class="clearfix">
               <div class="option-combo">
-                <h2 class="TzFilter">Filter<span></span></h2>
+                <h2 class="TzFilter">?What are you hungry for<span></span></h2>
                 <ul id="filter" class="option-set clearfix" data-option-key="filter">
                   <li><a href="#show-all" data-option-value="*" class="selected"><em>Show all</em></a></li>
                   <li> <a href="#American" data-option-value=".American"> <em>American</em> </a> </li>
                   <li> <a href="#Bakery" data-option-value=".Bakery"> <em>Bakery</em> </a> </li>
                   <li> <a href="#BBQ" data-option-value=".BBQ"> <em>BBQ</em> </a> </li>
-                  <li> <a href="#Cafe" data-option-value=".Cafe"> <em>Cafe</em> </a> </li>
+                  <li> <a href="#Coffee" data-option-value=".Coffee"> <em>Coffee</em> </a> </li>
                   <li> <a href="#Italian" data-option-value=".Italian"> <em>Italian</em> </a> </li>
                   <li> <a href="#Mexican" data-option-value=".Mexican"> <em>Mexican</em> </a> </li>
-                  <li> <a href="#Steakhouse" data-option-value=".Steakhouse"> <em>Steakhouse</em> </a> </li>                  
+                  <li> <a href="#Steakhouse" data-option-value=".Steakhouse"> <em>Steakhouse</em> </a> </li>
+				  <li> <a href="#International" data-option-value=".International"> <em>International</em> </a> </li>
+				  <li> <a href="#IceCream" data-option-value=".IceCream"> <em>Ice Cream</em> </a> </li>
+				  <li> <a href="#Sandwiches" data-option-value=".Sandwiches"> <em>Sandwiches</em> </a> </li>
+				  <li> <a href="#Pizza" data-option-value=".Pizza"> <em>Pizza</em> </a> </li>
+				  <li> <a href="#Burgers" data-option-value=".Burgers"> <em>Burgers</em> </a> </li>
+				  <li> <a href="#FastFood" data-option-value=".FastFood"> <em>Fast Food</em> </a> </li>
                 </ul>
               </div>
             </div>
