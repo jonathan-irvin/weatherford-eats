@@ -252,7 +252,7 @@ jQuery(document).ready(function() {
               </div>
             </div>
             <div id="portfolio" class="super-list variable-sizes clearfix">
-			  <?php echo $restaurants; ?>			  
+	      <?php foreach($restaurants as $listing)print $listing;?>			  
               <div class="element Drawing Illustration tz_item">
                 <div class="TzInner">
                   <div class="TzPortfolioMedia"> <a href="http://cdn.pimg.co/p/800x600/171666/fff/img.png" class="prettyPhoto" rel="prettyPhoto[id]"> <img src="http://cdn.pimg.co/p/400x300/171666/fff/img.png"/>
