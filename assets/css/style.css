@@ -109,9 +109,9 @@ h3 span em.h3_second_color { font-style:normal; color:#6d6d6d;  }
 
 .content_resize.no_bg {padding-top:10px;}
 
-.logo { margin:0; padding:0px 0 0px 0px; font-size:48px;  line-height:1em;  width:100%; min-height:124px; }
-.logo {background:url(../images/logo_bg.png) no-repeat top right;  text-align:center; }/**/
-.logo div { margin:0 auto; padding:72px 10px 0;  text-transform:uppercase;   }
+.logo { margin:0; padding:0px 0 0px 0px; font-size:40px;  line-height:1em;  width:100%; min-height:124px; }
+/*.logo {background:url(../images/logo_bg.png) no-repeat top right;  text-align:center; }/**/
+.logo div { margin:0 auto; padding:72px 10px 0;  /*text-transform:uppercase;*/   font-family: Oswald, sans-serif;}
 .logo div a,
 .logo div span,
 .logo div a:hover { color:#fff; text-decoration:none; font-weight:normal;  text-align:center; }
