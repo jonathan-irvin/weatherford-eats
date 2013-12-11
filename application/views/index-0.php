@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title><?php echo $title;?></title>
-<meta name="description" content="Enter Your Website Description Here">
+<meta name="description" content="Your source for the best eats in Weatherford, OK">
 <meta name="keywords" content="website, business, store" />
 <meta name="robots" content="index, follow" />
 
@@ -172,7 +172,7 @@ jQuery(document).ready(function() {
         <div class="main_menu_top"> 
           <!-- logo -->
           <div class="logo">
-            <div><a href="index.html"><?php echo $title;?></a></div>
+            <div><a href="/"><?php echo $title;?></a></div>
             <p>Your source for the best eats in Weatherford</p>
           </div>
           <!-- logo -->
@@ -201,7 +201,7 @@ jQuery(document).ready(function() {
           <div class="footer">
             <div class="footer_resize">
               <div class="clr"></div>
-              <p>&copy; Copyright <a href="#"><em><? echo $title; ?></em></a>.<br />
+              <p>&copy; Copyright <a href="#"><em><?php echo $title; ?></em></a>.<br />
                 All Rights Reserved.<br />
                 Design by <a href="http://www.beacontechsupport.com" target="_blank" title="Beacon Tech Support">Beacon Tech Support</a>.</p>
               <div class="clr"></div>
@@ -219,8 +219,8 @@ jQuery(document).ready(function() {
               <div class="main_menu_top"> 
                 <!-- logo -->
                 <div class="logo">
-                  <div><a href="index.html">Vooveo</a></div>
-                  <p>Premium portfolio</p>
+                  <div><a href="/"><?php echo $title;?></a></div>
+                  <p>Your source for the best eats in Weatherford</p>
                 </div>
                 <!-- logo -->
                 <div class="clr"></div>
@@ -240,20 +240,19 @@ jQuery(document).ready(function() {
               <div class="option-combo">
                 <h2 class="TzFilter">?What are you hungry for<span></span></h2>
                 <ul id="filter" class="option-set clearfix" data-option-key="filter">
-                  <li><a href="#show-all" data-option-value="*" class="selected"><em>Show all</em></a></li>
+                  <li> <a href="#show-all" data-option-value="*" class="selected"><em>Show all</em></a></li>
                   <li> <a href="#American" data-option-value=".American"> <em>American</em> </a> </li>
+				  <li> <a href="#Asian" data-option-value=".Asian"> <em>Asian</em> </a> </li>
                   <li> <a href="#Bakery" data-option-value=".Bakery"> <em>Bakery</em> </a> </li>
                   <li> <a href="#BBQ" data-option-value=".BBQ"> <em>BBQ</em> </a> </li>
-                  <li> <a href="#Coffee" data-option-value=".Coffee"> <em>Coffee</em> </a> </li>
-                  <li> <a href="#Italian" data-option-value=".Italian"> <em>Italian</em> </a> </li>
-                  <li> <a href="#Mexican" data-option-value=".Mexican"> <em>Mexican</em> </a> </li>
-                  <li> <a href="#Steakhouse" data-option-value=".Steakhouse"> <em>Steakhouse</em> </a> </li>
-				  <li> <a href="#International" data-option-value=".International"> <em>International</em> </a> </li>
-				  <li> <a href="#IceCream" data-option-value=".IceCream"> <em>Ice Cream</em> </a> </li>
-				  <li> <a href="#Sandwiches" data-option-value=".Sandwiches"> <em>Sandwiches</em> </a> </li>
-				  <li> <a href="#Pizza" data-option-value=".Pizza"> <em>Pizza</em> </a> </li>
 				  <li> <a href="#Burgers" data-option-value=".Burgers"> <em>Burgers</em> </a> </li>
-				  <li> <a href="#FastFood" data-option-value=".FastFood"> <em>Fast Food</em> </a> </li>
+                  <li> <a href="#Coffee" data-option-value=".Coffee"> <em>Coffee</em> </a> </li>
+				  <li> <a href="#International" data-option-value=".International"> <em>International</em> </a> </li>
+                  <li> <a href="#Italian" data-option-value=".Italian"> <em>Italian</em> </a> </li>
+                  <li> <a href="#Mexican" data-option-value=".Mexican"> <em>Mexican</em> </a> </li>             
+				  <li> <a href="#Pizza" data-option-value=".Pizza"> <em>Pizza</em> </a> </li>				  
+				  <li> <a href="#Sandwiches" data-option-value=".Sandwiches"> <em>Sandwiches</em> </a> </li>
+				  <li> <a href="#Steakhouse" data-option-value=".Steakhouse"> <em>Steakhouse</em> </a> </li>
                 </ul>
               </div>
             </div>
