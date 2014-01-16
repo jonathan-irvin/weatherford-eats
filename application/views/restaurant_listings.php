@@ -1,3 +1,4 @@
+<body>
 <script type="text/javascript">
         function tz_init(defaultwidth){
             var contentWidth    = jQuery('#content').outerWidth(true);
