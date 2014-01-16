@@ -48,7 +48,7 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
+$db['default']['hostname'] = 'beacontechsupport.com';
 $db['default']['username'] = 'beacon42_wfdeats';
 $db['default']['password'] = '{?(kJtciRha#LgUko)';
 $db['default']['database'] = 'beacon42_wfordeats';
