@@ -25,13 +25,10 @@ class Welcome extends CI_Controller {
 		// $this->load->view('index_content');
 		// $this->load->view('footer');
 		
-		
-		
-		
-		
-		$data['title'] = "Weatherford Eats";
-		$data['restaurants'] = $this->generate();
-		$this->load->view('index-0',$data);
+		$header_data['title'] = "Weatherford Eats";
+		$restaurant_data['restaurants'] = $this->generate();
+		$this->load->view('header',$header_data);
+		$this->load->view('restaurant_listings',$restaurant_data);
 	}
 	
 	private function generate()
@@ -45,15 +42,23 @@ class Welcome extends CI_Controller {
 			'sf');
 		$this->load->library('restaurant',array(
 			'name'=>"The Stand",			
-			'tags'=>"American International",	
+			'tags'=>"American International Sandwiches",	
 			'menu_url'=>'assets/restaurants/menus/stand_menu_full.png',
 			'image'=>'assets/restaurants/the_stand.jpg',
 			'description' => "Awesome sandwiches"),	
 			'stand');
+		$this->load->library('restaurant',array(
+			'name'=>"The Stand",			
+			'tags'=>"American BBQ",	
+			'menu_url'=>'http://legacy.ybsitecenter.com/images/kop/var/bv/94419/827222-menu.pdf',
+			'image'=>'assets/restaurants/heapinhelpinbbq.jpg',
+			'description' => "Great local BBQ"),	
+			'hhbbq');
 		
 		
 	
 		$restaurants = array(
+			$this->hhbbq->toString(),
 			$this->sf->toString(),
 			$this->stand->toString()
 		);		

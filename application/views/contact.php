@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>(Pro) Responsive Template</title>
+<title><?=$title?> - Weatherford Eats</title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!-- Mobile Specific Metas  ================================================== -->
@@ -83,7 +83,7 @@ var gmap;
 function initialize() {
     var myOptions = {
    	 zoom: 15,
-   	 center: new google.maps.LatLng(37.776685,-122.419538), // google map location to show
+   	 center: new google.maps.LatLng(<?=$lat?>,<?=$long?>), // google map location to show
    	 mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     gmap = new google.maps.Map(document.getElementById('gmap_contact'),myOptions);
