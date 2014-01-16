@@ -26,45 +26,12 @@ class Welcome extends CI_Controller {
 		// $this->load->view('footer');
 		
 		$header_data['title'] = "Weatherford Eats";
-		$restaurant_data['restaurants'] = $this->generate_alt();
+		$restaurant_data['restaurants'] = $this->generate();
 		$this->load->view('header',$header_data);
 		$this->load->view('restaurant_listings',$restaurant_data);
 	}
 	
 	private function generate()
-	{
-		$this->load->library('restaurant',array(
-			'name'=>"Sweetness Factory",	
-			'tags'=>"American Bakery",	
-			'menu_url'=>'http://sweetnessfactory.com/?page_id=156',
-			'image'=>'assets/restaurants/sweetness_factory.png',
-			'description' => "Sweet"),
-			'sf');
-		$this->load->library('restaurant',array(
-			'name'=>"The Stand",			
-			'tags'=>"American International Sandwiches",	
-			'menu_url'=>'assets/restaurants/menus/stand_menu_full.png',
-			'image'=>'assets/restaurants/the_stand.jpg',
-			'description' => "Awesome sandwiches"),	
-			'stand');
-		$this->load->library('restaurant',array(
-			'name'=>"The Stand",			
-			'tags'=>"American BBQ",	
-			'menu_url'=>'http://legacy.ybsitecenter.com/images/kop/var/bv/94419/827222-menu.pdf',
-			'image'=>'assets/restaurants/heapinhelpinbbq.jpg',
-			'description' => "Great local BBQ"),	
-			'hhbbq');		
-	
-		$restaurants = array(
-			$this->hhbbq->toString(),
-			$this->sf->toString(),
-			$this->stand->toString()
-		);		
-		
-		return $restaurants;
-	}
-	
-	private function generate_alt()
 	{
 		$this->load->database();
 		
@@ -72,21 +39,41 @@ class Welcome extends CI_Controller {
 		
 		foreach ($query->result() as $row)
 		{			
-			$this->load->library('restaurant',array(
-			'name'				=>$row->name,	
-			'tags'				=>$row->tags,	
-			'menu_url'			=>$row->menu_url,
-			'image'				=>$row->image,
-			'description'	 	=>$row->description),
-			$row->id);
-		}
-		
-		for($i=0;$i<$this->db->count_all('restaurants');$i++){
-			$restaurants[] = $this->$i->toString();
-		}
+			$restaurants[] = $this->restaurant_output(
+				array(
+				'name'				=>$row->name,	
+				'tags'				=>$row->tags,	
+				'menu_url'			=>$row->menu_url,
+				'image'				=>$row->image_url,
+				'description'	 	=>$row->description)
+			);
+		}	
 		
 		return $restaurants;
 	}
+	
+	private function restaurant_output($params){			
+		
+		$name 			= $params['name'];
+		$tags			= $params['tags'];
+		$img			= $params['image'];
+		$menu_url		= $params['menu_url'];	
+		$description	= $params['description'];			
+	
+		return "<div class=\"element $tags tz_item\">
+                <div class=\"TzInner\">
+                  <div class=\"TzPortfolioMedia\"> <a href=\"$menu_url\" class=\"prettyPhoto\" rel=\"prettyPhoto[id]\"> <img src=\"$img\"/>
+                    <div class=\"TzPortfolioDescription\">
+                      <h3 class=\"TzPortfolioTitle name\" itemprop=\"name\"> <em>$name</em> </h3>
+                      <span class=\"TzItemTag\">$description</span>
+                      <div class=\"r_plus \"></div>
+                    </div>
+                    </a> </div>
+                </div>
+                <!--Inner--> 
+              </div>";
+	}
+	
 }
 
 /* End of file welcome.php */
