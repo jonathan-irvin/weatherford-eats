@@ -26,7 +26,7 @@ class Welcome extends CI_Controller {
 		// $this->load->view('footer');
 		
 		$header_data['title'] = "Weatherford Eats";
-		$restaurant_data['restaurants'] = $this->generate();
+		$restaurant_data['restaurants'] = $this->generate_alt();
 		$this->load->view('header',$header_data);
 		$this->load->view('restaurant_listings',$restaurant_data);
 	}
@@ -77,7 +77,7 @@ class Welcome extends CI_Controller {
 			'tags'				=>$row->tags,	
 			'menu_url'			=>$row->menu_url,
 			'image'				=>$row->image,
-			'description'	 	=>$row->description)
+			'description'	 	=>$row->description),
 			$row->id);
 		}
 		
