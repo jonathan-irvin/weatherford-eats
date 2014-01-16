@@ -53,15 +53,37 @@ class Welcome extends CI_Controller {
 			'menu_url'=>'http://legacy.ybsitecenter.com/images/kop/var/bv/94419/827222-menu.pdf',
 			'image'=>'assets/restaurants/heapinhelpinbbq.jpg',
 			'description' => "Great local BBQ"),	
-			'hhbbq');
-		
-		
+			'hhbbq');		
 	
 		$restaurants = array(
 			$this->hhbbq->toString(),
 			$this->sf->toString(),
 			$this->stand->toString()
 		);		
+		
+		return $restaurants;
+	}
+	
+	private function generate_alt()
+	{
+		$this->load->database();
+		
+		$query = $this->db->get('restaurants');
+		
+		foreach ($query->result() as $row)
+		{			
+			$this->load->library('restaurant',array(
+			'name'				=>$row->name,	
+			'tags'				=>$row->tags,	
+			'menu_url'			=>$row->menu_url,
+			'image'				=>$row->image,
+			'description'	 	=>$row->description)
+			$row->id);
+		}
+		
+		for($i=0;$i<$this->db->count_all('restaurants');$i++){
+			$restaurants[] = $this->$i->toString();
+		}
 		
 		return $restaurants;
 	}
