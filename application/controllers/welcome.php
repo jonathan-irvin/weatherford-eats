@@ -62,11 +62,10 @@ class Welcome extends CI_Controller {
 				  <div class=\"mega-covercaption mega-square-bottom mega-landscape-right mega-portrait-bottom mega-blue\"> 
 					<!-- The Content Part with Hidden Overflow Container -->
 					
-					<div class=\"mega-title\"><img src=\"images/icons/grid.png\" alt=\"\" style=\"float: left; padding-right: 15px;\"/>$name</div>
-					<div class=\"mega-date\">Windows 8 Style</div>
+					<div class=\"mega-title\"><img src=\"assets/images/icons/grid.png\" alt=\"\" style=\"float: left; padding-right: 15px;\"/>$name</div>
+					<div class=\"mega-date\"><a href=\"$menu_url\">See the Menu</a></p></div>
 					<p>$description<br/>
-					  <br/>
-					  <a href=\"$menu_url\">See the Menu</a></p>
+					  </p>
 				  </div>
 				  
 				  <!-- The Link Buttons -->
