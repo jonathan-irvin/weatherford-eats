@@ -1,263 +1,532 @@
-<body>
-<script type="text/javascript">
-        function tz_init(defaultwidth){
-            var contentWidth    = jQuery('#content').outerWidth(true);
-            var columnWidth     = defaultwidth;
-            var curColCount     = 0;
-            var maxColCount     = 0;
-            var newColCount     = 0;
-            var newColWidth     = 0;
-            var featureColWidth = 0;
-
-            curColCount = Math.floor(contentWidth / columnWidth);
-            maxColCount = curColCount + 1;
-            if((maxColCount - (contentWidth / columnWidth)) > ((contentWidth / columnWidth) - curColCount)){
-                newColCount     = curColCount;
-            }
-            else{
-                newColCount = maxColCount;
-            }
-
-            newColWidth = contentWidth;
-            featureColWidth = contentWidth;
-
-
-            if(newColCount > 1){
-                newColWidth = Math.floor(contentWidth / newColCount);
-                featureColWidth = newColWidth * 2;
-            }
-
-            jQuery('.element').width(newColWidth);
-            jQuery('.tz_item').each(function(){
-                jQuery(this).find('img').first().attr('width','100%');
-            });
-
-            jQuery('.tz_feature_item').width(featureColWidth);
-
-            var $container = jQuery('#portfolio');
-            $container.imagesLoaded(function(){
-                //Get Item Height
-                var $element = jQuery('.element img');
-                var minHeight   = jQuery('.element img:first').height();
-                var imgWidth    = jQuery('.element img:first').width();
-                /////Get minimum image Height
-                $element.each(function(){
-                    if(minHeight > jQuery(this).height()){
-                        minHeight   = jQuery(this).height();
-                        imgWidth    = jQuery(this).width();
-                    }
-                });
-
-                /////Calculate image width and image height again
-                var $newImgW    = newColWidth;
-                var $newImgH    = $newImgW*minHeight/imgWidth;
-                jQuery('.element .TzInner').css({
-                    'height':parseInt($newImgH),
-                    'padding-bottom': 0
-                });
-                $container.isotope({
-                    masonry:{
-                        columnWidth: newColWidth
-                    }
-                });
-
-            });
-        }
-    </script>
-<div class="body_pattern">
-  <div class="index_page">
-    <div class="main">
-      <div class="main_menu opn_mn">
-        <!-- <div class="main_menu_button"></div> -->
-        <div class="main_menu_top"> 
-          <!-- logo -->
-          <div class="logo">
-            <div><a href="/"><?php echo $title;?></a></div>
-            <p>Your source for the best eats in Weatherford</p>
-          </div>
-          <!-- logo -->
-          <div class="clr"></div>
-        </div>
-        <!-- menu edit in file "js/menu_html_block.js" 
-        <div class="menu"> 
-          <script type="text/javascript" src="assets/js/menu_html_block.js"></script> 
-        </div>
-         /menu -->
+<div class="container"> 
+  
+  <!-- The GRID System -->
+  <div class="megafolio-container noborder norounded dark-bg-entries"> 
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-two cat-all" id="mega-entry-1" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585" data-lowsize="">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-right mega-portrait-bottom mega-blue"> 
+        <!-- The Content Part with Hidden Overflow Container -->
         
-        <div class="clr"></div>
-        <div class="main_menu_bottom"> 
-          <!-- social 
-          <div class="social">
-            <div class="social_text">Stay Connected</div>
-				<a href="#"><img src="assets/images/spacer.gif" class="social1" /></a> 
-				<a href="#"><img src="assets/images/spacer.gif" class="social2" /></a> 
-				<a href="#"><img src="assets/images/spacer.gif" class="social3" /></a> 
-				<a href="#"><img src="assets/images/spacer.gif" class="social4" /></a> 
-				<a href="#"><img src="assets/images/spacer.gif" class="social5" /></a> 
-				<a href="#"><img src="assets/images/spacer.gif" class="social6" /></a>
-			</div>
-          <!-- social -->
-          <div class="clr"></div>
-          <!-- footer -->
-          <div class="footer">
-            <div class="footer_resize">
-              <div class="clr"></div>
-              <p>&copy; Copyright <a href="#"><em><?php echo $title; ?></em></a>.<br />
-                All Rights Reserved.<br />
-                Design by <a href="http://www.beacontechsupport.com" target="_blank" title="Beacon Tech Support">Beacon Tech Support</a>.</p>
-              <div class="clr"></div>
-            </div>
-            <div class="clr"></div>
-          </div>
-          <!-- footer -->
-          <div class="clr"></div>
-        </div>
+        <div class="mega-title"><img src="images/icons/grid.png" alt="" style="float: left; padding-right: 15px;"/>A Multi-Purpose Grid Plugin</div>
+        <div class="mega-date">Windows 8 Style</div>
+        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua...<br/>
+          <br/>
+          <a href="#">Read the whole story</a></p>
       </div>
-      <div class="main_content">
-        <div class="scroll-panel">
-          <div id="content" class="content">
-            <div class="mobileview">
-              <div class="main_menu_top"> 
-                <!-- logo -->
-                <div class="logo">
-                  <div><a href="/"><?php echo $title;?></a></div>
-                  <p>Your source for the best eats in Weatherford</p>
-                </div>
-                <!-- logo -->
-                <div class="clr"></div>
-              </div>
-              
-              <!-- menu edit in file "js/menu_html_block.js" -->
-              <div class="menu"> 
-                <script type="text/javascript" src="js/mobile_menu.js"></script> 
-              </div>
-              <!-- /menu -->
-              
-			  <!--
-              <div class="social">
-                <div class="social_text">Stay Connected</div>
-                <a href="#"><img src="assets/images/spacer.gif" class="social1" /></a> 
-				<a href="#"><img src="assets/images/spacer.gif" class="social2" /></a> 
-				<a href="#"><img src="assets/images/spacer.gif" class="social3" /></a> 
-				<a href="#"><img src="assets/images/spacer.gif" class="social4" /></a> 
-				<a href="#"><img src="assets/images/spacer.gif" class="social5" /></a> 
-				<a href="#"><img src="assets/images/spacer.gif" class="social6" /></a>
-			  </div>
-			  -->
-            </div>
-            <div id="tz_options" class="clearfix">
-              <div class="option-combo">
-                <h2 class="TzFilter">?What are you hungry for<span></span></h2>
-                <ul id="filter" class="option-set clearfix" data-option-key="filter">
-                  <li> <a href="#show-all" data-option-value="*" class="selected"><em>Show all</em></a></li>
-                  <li> <a href="#American" data-option-value=".American"> <em>American</em> </a> </li>
-				  <li> <a href="#Asian" data-option-value=".Asian"> <em>Asian</em> </a> </li>
-                  <li> <a href="#Bakery" data-option-value=".Bakery"> <em>Bakery</em> </a> </li>
-                  <li> <a href="#BBQ" data-option-value=".BBQ"> <em>BBQ</em> </a> </li>
-				  <li> <a href="#Burgers" data-option-value=".Burgers"> <em>Burgers</em> </a> </li>
-                  <li> <a href="#Coffee" data-option-value=".Coffee"> <em>Coffee</em> </a> </li>
-				  <li> <a href="#International" data-option-value=".International"> <em>International</em> </a> </li>
-                  <li> <a href="#Italian" data-option-value=".Italian"> <em>Italian</em> </a> </li>
-                  <li> <a href="#Mexican" data-option-value=".Mexican"> <em>Mexican</em> </a> </li>             
-				  <li> <a href="#Pizza" data-option-value=".Pizza"> <em>Pizza</em> </a> </li>				  
-				  <li> <a href="#Sandwiches" data-option-value=".Sandwiches"> <em>Sandwiches</em> </a> </li>
-				  <li> <a href="#Steakhouse" data-option-value=".Steakhouse"> <em>Steakhouse</em> </a> </li>
-                </ul>
-              </div>
-            </div>
-            <div id="portfolio" class="super-list variable-sizes clearfix">
-	      <?php foreach($restaurants as $listing)print $listing;?>			           
-            </div>
-            <script type="text/javascript">
-	
-	     var tz = jQuery.noConflict();
-	     var resizeTimer = null;
-	    jQuery(window).bind('load resize', function() {
-	        if (resizeTimer) clearTimeout(resizeTimer);
-	        resizeTimer = setTimeout("tz_init("+"350)", 100);
-	    });
-	
-	
-	    var $container = tz('#portfolio');
-	    $container.imagesLoaded( function(){
-	        $container.isotope({
-	            itemSelector : '.element',
-	            layoutMode: 'masonry',
-	            getSortData: {
-	                name: function( $elem ) {
-	                    var name = $elem.find('.name'),
-	                        itemText = name.length ? name : $elem;
-	                    return itemText.text();
-	                },
-	                date: function($elem){
-	                    var number = $elem.hasClass('element') ?
-	                      $elem.find('.create').text() :
-	                      $elem.attr('data-date');
-	                    return number;
-	
-	                }
-	            }
-	        });
-	        tz_init(350);
-	    });
-	     jQuery(document).ready(function(){
-			 //my_comment
-	         //jQuery.callFunction("tz_init(358)");
-	     });
-	
-	    function loadPortfolio(){
-	          var $optionSets = tz('#tz_options .option-set'),
-	             $optionLinks = $optionSets.find('a');
-	          $optionLinks.click(function(event){
-	              event.preventDefault();
-	            var $this = tz(this);
-	            // don't proceed if already selected
-	            if ( $this.hasClass('selected') ) {
-	              return false;
-	            }
-	            var $optionSet = $this.parents('.option-set');
-	            $optionSet.find('.selected').removeClass('selected');
-	            $this.addClass('selected');
-	
-	            // make option object dynamically, i.e. { filter: '.my-filter-class' }
-	            var options = {},
-	                key = $optionSet.attr('data-option-key'),
-	                value = $this.attr('data-option-value');
-	            // parse 'false' as false boolean
-	
-	            value = value === 'false' ? false : value;
-	            options[ key ] = value;
-	            if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
-	
-	              // changes in layout modes need extra logic
-	              changeLayoutMode( $this, options )
-	            } else {
-	              // otherwise, apply new options
-	              $container.isotope( options );
-	            }
-	
-	            return false;
-	          });
-	    }
-	//    isotopeinit();
-	    loadPortfolio();
-			//my_comment
-	       // jQuery('#portfolio > div.element > div.TzInner > div.TzPortfolioMedia').hoverdir();
-
-
- 		 </script>
-            <div id="tz_append"> </div>
-            <div class="copyright">
-              <p>&copy; Copyright <a href="#"><em><?php echo $title;?></em></a>.
-                All Rights Reserved. Design by <a href="http://www.beacontechsupport.com" target="_blank" title="Beacon Tech Support">Beacon Tech Support</a>.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-blue"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-blue"></div>
+        </a> </div>
     </div>
-    <div class="clr"></div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-one cat-all"  id="mega-entry-2"  data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="385" data-lowsize="">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-left mega-portrait-bottom mega-orange mega-white ">
+        <div class="mega-title">100% Responsive</div>
+        <div class="mega-date">Works on Desktop, Mobile.</div>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua...</p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-orange"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-orange"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-three cat-all"  id="mega-entry-3" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="485">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-bottom mega-portrait-bottom mega-turquoise ">
+        <div class="mega-title"><img src="images/icons/flexible.png" alt="" style="float: left; padding-right: 15px;"/>Flexible</div>
+        <div class="mega-date">Layouts</div>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-turquoise"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-turquoise"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-four cat-all"  id="mega-entry-4" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="680" data-height="685">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-bottom mega-portrait-bottom mega-black ">
+        <div class="mega-title">12 Grid Styles</div>
+        <div class="mega-date">to choose from!</div>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt...</p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-black"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-black"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-one cat-all"  id="mega-entry-5" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-bottom mega-portrait-bottom mega-violet ">
+        <div class="mega-title"><img src="images/icons/light.png" alt="" style="float: left; padding-right: 15px;"/>Lightbox Enabled</div>
+        <div class="mega-date">Show Images, Videos</div>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons "> <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-violet"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-two cat-all"  id="mega-entry-6" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="580" data-height="435">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-left mega-portrait-bottom mega-green ">
+        <div class="mega-title"><img src="images/icons/nike.png" alt="" style="float: left; padding-right: 15px;"/>Category Filter</div>
+        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis....</p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-green"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-green"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-three cat-all"  id="mega-entry-7" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="385"> 
+      
+      <!-- HOVER EFFECT -->
+      <div class="mega-hover">
+        <div class="mega-hovertitle">LUNCH
+          <div class="mega-hoversubtitle">CATEGORY THREE</div>
+        </div>
+        <a href="http://www.google.com" class="mega-hoverlink" target="blank"></a> <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg">
+        <div class="mega-hoverview"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-four cat-all"  id="mega-entry-8" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="525"> 
+      
+      <!-- HOVER EFFECT -->
+      <div class="mega-hover">
+        <div class="mega-hovertitle">M COLLECTION
+          <div class="mega-hoversubtitle">CATEGORY FOUR</div>
+        </div>
+        <a href="http://www.google.com" class="mega-hoverlink" target="blank"></a> <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg">
+        <div class="mega-hoverview"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-two cat-all"  id="mega-entry-9" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585"> 
+      
+      <!-- HOVER EFFECT -->
+      <div class="mega-hover">
+        <div class="mega-hovertitle">THE FIELDS
+          <div class="mega-hoversubtitle">CATEGORY TWO</div>
+        </div>
+        <a href="http://www.google.com" class="mega-hoverlink" target="blank"></a> <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg">
+        <div class="mega-hoverview"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-two cat-all"  id="mega-entry-11" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="565"> 
+      
+      <!-- HOVER EFFECT -->
+      <div class="mega-hover">
+        <div class="mega-hovertitle">SHOW BOTH HOVER + CORNER BUTTONS!
+          <div class="mega-hoversubtitle">CATEGORY TWO</div>
+        </div>
+        <a href="http://www.google.com" class="mega-hoverlink" target="blank"></a> <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg">
+        <div class="mega-hoverview"></div>
+        </a> </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-red"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-red"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-three cat-all"  id="mega-entry-12" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="525">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-bottom mega-portrait-bottom mega-turquoise ">
+        <div class="mega-title">Metro Style</div>
+        <div class="mega-date">Just one thing thats possible</div>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-turquoise"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-turquoise"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-one cat-all"  id="mega-entry-10" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="mega-covercaption mega-square-right mega-landscape-right mega-portrait-bottom mega-blue ">
+        <div class="mega-title">External Links</div>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr... <img src="images/icons/runner.png" alt="" style="padding-top: 15px;"/> </p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-blue"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-blue"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-four cat-all"  id="mega-entry-13" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585"> 
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-black"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-black"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-one cat-all"  id="mega-entry-14" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-left mega-portrait-bottom mega-red">
+        <div class="mega-title">100% jQuery</div>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua...</p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-orange"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-orange"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-two cat-all"  id="mega-entry-15" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585"> 
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-orange"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-orange"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-one cat-all"  id="mega-entry-25" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="mega-covercaption mega-square-top mega-landscape-left mega-portrait-top mega-transparent mega-white ">
+        <div class="mega-title"><img src="images/icons/mobile.png" alt="" style="float: left; padding-right: 15px;"/>Transparent Captions</div>
+        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros...</p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-violet"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-violet"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-two cat-all"  id="mega-entry-26" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="fatcaption-bottom">STATIC CAPTION EXAMPLE</div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-blue"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-blue"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-three cat-all"  id="mega-entry-27" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="mega-covercaption mega-square-top mega-landscape-left mega-portrait-top mega-green">
+        <div class="mega-title"><img src="images/icons/leaf.png" alt="" style="float: left; padding-right: 15px;"/>Tiles</div>
+        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros...</p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-green"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-green"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-one cat-all" id="mega-entry-28" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585" data-lowsize="">
+      <div class="mega-covercaption mega-square-right mega-landscape-right mega-portrait-bottom mega-red"> 
+        <!-- The Content Part with Hidden Overflow Container -->
+        
+        <div class="mega-title"><img src="images/icons/grid.png" alt="" style="float: left; padding-right: 15px;"/>Transitions</div>
+        <div class="mega-date">Multiple Effects</div>
+        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua...<br/>
+          <br/>
+          <a href="#">Read the whole story</a></p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons mega-square-top mega-landscape-right mega-portrait-bottom">
+        <div class="mega-link mega-red"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-red"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-two cat-all"  id="mega-entry-29"  data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585" data-lowsize="">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-left mega-portrait-bottom mega-orange mega-white ">
+        <div class="mega-title">100% Customizable</div>
+        <div class="mega-date">Colors, Size & More!</div>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua...</p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-orange"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-orange"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-four cat-all"  id="mega-entry-3" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="mega-covercaption mega-square-top mega-landscape-bottom mega-portrait-bottom mega-turquoise ">
+        <div class="mega-title"><img src="images/icons/flexible.png" alt="" style="float: left; padding-right: 15px;"/>Retina Display</div>
+        <div class="mega-date">Fully Supported</div>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-turquoise"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-turquoise"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-three cat-all"  id="mega-entry-4" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-bottom mega-portrait-bottom mega-black ">
+        <div class="mega-title">Fast Loading</div>
+        <div class="mega-date">Small files, optimized codes</div>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt...</p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-black"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-black"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-two cat-all"  id="mega-entry-5" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-right mega-portrait-bottom mega-violet ">
+        <div class="mega-title"><img src="images/icons/light.png" alt="" style="float: left; padding-right: 15px;"/>Effective</div>
+        <div class="mega-date">& Eye Catching</div>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua...</p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-violet"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-violet"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-one cat-all"  id="mega-entry-6" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585"> 
+      
+      <!-- HOVER EFFECT -->
+      <div class="mega-hover">
+        <div class="mega-hovertitle">LOUNGE
+          <div class="mega-hoversubtitle">CATEGORY TWO</div>
+        </div>
+        <a href="http://www.google.com" class="mega-hoverlink" target="blank"></a> <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg">
+        <div class="mega-hoverview"></div>
+        </a> </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-green"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-green"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-four cat-all"  id="mega-entry-7" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585"> 
+      
+      <!-- HOVER EFFECT -->
+      <div class="mega-hover">
+        <div class="mega-hovertitle">MODEL POSE
+          <div class="mega-hoversubtitle">CATEGORY FOUR</div>
+        </div>
+        <a href="http://www.google.com" class="mega-hoverlink" target="blank"></a> <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg">
+        <div class="mega-hoverview"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-three cat-all"  id="mega-entry-8" data-src="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" data-width="780" data-height="585"> 
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-orange"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-orange"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-one cat-all"  id="mega-entry-9" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585"> 
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-black"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-black"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-four cat-all"  id="mega-entry-11" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585"> 
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-black"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-black"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-two cat-all"  id="mega-entry-12" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-bottom mega-portrait-bottom mega-turquoise ">
+        <div class="mega-title">Metro Style</div>
+        <div class="mega-date">In line with trends</div>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-turquoise"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-turquoise"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-one cat-all"  id="mega-entry-10" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="mega-covercaption mega-square-right mega-landscape-right mega-portrait-bottom mega-blue ">
+        <div class="mega-title">#1</div>
+        <p>Lorem ipsum dolor sit amet, consetetur... <img src="images/icons/runner.png" alt="" style="padding-top: 15px;"/> </p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-blue"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-blue"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-one cat-all"  id="mega-entry-13" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585"> 
+      
+      <!-- HOVER EFFECT -->
+      <div class="mega-hover">
+        <div class="mega-hovertitle">SHOWROOM #1
+          <div class="mega-hoversubtitle">CATEGORY ONE</div>
+        </div>
+        <a href="http://www.google.com" class="mega-hoverlink" target="blank"></a> <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg">
+        <div class="mega-hoverview"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-two cat-all"  id="mega-entry-14" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-left mega-portrait-bottom mega-red">
+        <div class="mega-title">Powerful</div>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-orange"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-orange"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-one cat-all"  id="mega-entry-15" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585"> 
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-orange"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-orange"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-two cat-all"  id="mega-entry-25" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-bottom mega-portrait-top mega-violet ">
+        <div class="mega-title"><img src="images/icons/mobile.png" alt="" style="float: left; padding-right: 15px;"/>Mobile Optimized</div>
+        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros...</p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-violet"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-violet"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-one cat-all"  id="mega-entry-26" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="fatcaption-bottom">STATIC CAPTION EXAMPLE</div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-blue"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-blue"></div>
+        </a> </div>
+    </div>
+    
+    <!-- A GALLERY ENTRY -->
+    <div class="mega-entry cat-four cat-all"  id="mega-entry-27" data-src="http://cdn.pimg.co/p/640x480/000000/ffffff/pic.jpg" data-width="780" data-height="585">
+      <div class="mega-covercaption mega-square-bottom mega-landscape-left mega-portrait-top mega-green ">
+        <div class="mega-title"><img src="images/icons/leaf.png" alt="" style="float: left; padding-right: 15px;"/>Auto Resizing</div>
+        <p>Duis autem vel eum iriure dolor in hendrerit...</p>
+      </div>
+      
+      <!-- The Link Buttons -->
+      <div class="mega-coverbuttons">
+        <div class="mega-link mega-green"></div>
+        <a class="fancybox" rel="group" href="http://cdn.pimg.co/p/800x600/000000/ffffff/pic.jpg" title="Photo">
+        <div class="mega-view mega-green"></div>
+        </a> </div>
+    </div>
   </div>
-  <div class="clr"></div>
 </div>
-</body>
-</html>
+<div class="divide90"></div>
+
+<br /><br /><br /><br />
