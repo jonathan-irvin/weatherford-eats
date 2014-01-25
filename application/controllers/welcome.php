@@ -19,16 +19,13 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		// TODO Import initial html or php and separate into separate views
-		// $data['title'] = "Beacon Tech Support Website";		
-		// $this->load->view('header',$data);
-		// $this->load->view('index_content');
-		// $this->load->view('footer');
-		
 		$header_data['title'] = "Weatherford Eats";
 		$restaurant_data['restaurants'] = $this->generate();
 		$this->load->view('header',$header_data);
+		$this->load->view('nav');
 		$this->load->view('restaurant_listings',$restaurant_data);
+		$this->load->view('settings');
+		$this->load->view('footer');
 	}
 	
 	private function generate()
@@ -60,18 +57,25 @@ class Welcome extends CI_Controller {
 		$menu_url		= $params['menu_url'];	
 		$description	= $params['description'];			
 	
-		return "<div class=\"element $tags tz_item\">
-                <div class=\"TzInner\">
-                  <div class=\"TzPortfolioMedia\"> <a href=\"$menu_url\" class=\"prettyPhoto\" rel=\"prettyPhoto[id]\"> <img src=\"$img\"/>
-                    <div class=\"TzPortfolioDescription\">
-                      <h3 class=\"TzPortfolioTitle name\" itemprop=\"name\"> <em>$name</em> </h3>
-                      <span class=\"TzItemTag\">$description</span>
-                      <div class=\"r_plus \"></div>
-                    </div>
-                    </a> </div>
-                </div>
-                <!--Inner--> 
-              </div>";
+		return "<!-- A GALLERY ENTRY -->
+				<div class=\"mega-entry $tags\" id=\"mega-entry-1\" data-src=\"$img\" data-width=\"780\" data-height=\"585\" data-lowsize=\"\">
+				  <div class=\"mega-covercaption mega-square-bottom mega-landscape-right mega-portrait-bottom mega-blue\"> 
+					<!-- The Content Part with Hidden Overflow Container -->
+					
+					<div class=\"mega-title\"><img src=\"images/icons/grid.png\" alt=\"\" style=\"float: left; padding-right: 15px;\"/>$name</div>
+					<div class=\"mega-date\">Windows 8 Style</div>
+					<p>$description<br/>
+					  <br/>
+					  <a href=\"$menu_url\">See the Menu</a></p>
+				  </div>
+				  
+				  <!-- The Link Buttons -->
+				  <div class=\"mega-coverbuttons\">
+					<div class=\"mega-link mega-blue\"></div>
+					<a class=\"fancybox\" rel=\"group\" href=\"$img\" title=\"Photo\">
+					<div class=\"mega-view mega-blue\"></div>
+					</a> </div>
+				</div>";
 	}
 	
 }
