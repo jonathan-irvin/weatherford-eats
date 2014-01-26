@@ -44,23 +44,19 @@
 
 /*** THE DIRECTIONS OF CAPTIONS **/
 .mega-square .mega-square-top						{	top:0px; left:0px; bottom:auto;}
-.mega-square .mega-square-bottom					{	bottom:0px;	left:0px;top:auto;}
+.mega-square .mega-square-bottom					{	bottom:0px;	left:0px;top:60%;}
 .mega-square .mega-square-left						{	top:0px; left:0px; max-width:50%; height:100%	}
-.mega-square .mega-square-right					 	{	top:0px; right:0px; left:auto; width:50%; height:100%	}
+.mega-square .mega-square-right					 	{	top:0px; right:0px; left:auto; width:25%; height:100%	}
 
 .mega-portrait .mega-portrait-top					{	top:0px; left:0px; bottom:auto;}
-.mega-portrait .mega-portrait-bottom				{	bottom:0px;	left:0px;top:auto;}
+.mega-portrait .mega-portrait-bottom				{	bottom:0px;	left:0px;top:70%;}
 .mega-portrait .mega-portrait-left					{	top:0px; left:0px; width:50%; height:100%	}
-.mega-portrait .mega-portrait-right					{	top:0px; right:0px; left:auto; width:50%; height:100%	}
+.mega-portrait .mega-portrait-right					{	top:0px; right:0px; left:auto; width:25%; height:100%	}
 
 .mega-landscape .mega-landscape-top					{	top:0px; left:0px; bottom:auto;}
 .mega-landscape .mega-landscape-bottom				{	bottom:0px;	left:0px;top:auto;}
 .mega-landscape .mega-landscape-left				{	top:0px; left:0px; width:50%; height:100%	}
-.mega-landscape .mega-landscape-right				{	top:0px; right:0px; left:auto; width:50%; height:100%	}
-
-
-
-
+.mega-landscape .mega-landscape-right				{	top:0px; right:0px; left:auto; width:25%; height:100%	}
 
 
 .mega-title							{	 text-align: left; font-family: 'Open Sans', sans-serif;  font-size:20px; line-height: 24px; color:#fff; font-weight:400; }

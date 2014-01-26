@@ -6,7 +6,7 @@ MEGAFOLIO RESPONSIVE BASIC STYLES OF HTML DOCUMENT
 	-	BASICS 	-
 ***********************/
 
-body					{	background:#777; }
+body					{	background:#fff; }
 
 .container				{	max-width:1260px; min-width:240px; width:auto; margin:auto; padding:0px 30px;
 							-moz-box-sizing: border-box;
