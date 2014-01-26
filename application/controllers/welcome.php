@@ -62,16 +62,25 @@ class Welcome extends CI_Controller {
 		$colors				= array('mega-red','mega-turquoise','mega-green','mega-orange','mega-blue','mega-violet');
 		$chosen_color		= $colors[array_rand($colors)];
 		
+		$menu_output;
+		
+		if($menu_url != "#"){
+			$menu_output = "<a href=\"$menu_url\">See the Menu</a>";
+		}else{
+			$menu_output = "Menu Coming Soon";
+		}
+		
 	
 		return "<!-- A GALLERY ENTRY -->
 				<div class=\"mega-entry $tags\" id=\"mega-entry-$id\" data-src=\"$img\" data-width=\"780\" data-height=\"585\" data-lowsize=\"\">
 				  <div class=\"mega-covercaption mega-square-bottom mega-landscape-right mega-portrait-bottom $chosen_color\"> 
 					<!-- The Content Part with Hidden Overflow Container -->
 					
-					<div class=\"mega-title\"><img src=\"assets/images/icons/grid.png\" alt=\"\" style=\"float: left; padding-right: 15px;\"/>$name</div>
-					<div class=\"mega-date\"><a href=\"$menu_url\">See the Menu</a></p></div>
-					<p>$description<br/>
-					  </p>
+					<div class=\"mega-title\"><!--<img src=\"assets/images/icons/grid.png\" alt=\"\" style=\"float: left; padding-right: 15px;\"/>-->$name</div>
+					<div class=\"mega-date\">$menu_output</p></div>
+					<p>$description<br/></p>
+					<p>Tags: $tags</p>
+					  
 				  </div>
 				  
 				  <!-- The Link Buttons -->

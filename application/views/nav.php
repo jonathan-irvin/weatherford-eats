@@ -2,6 +2,7 @@
 
 <div class="filter_padder" >
   <div class="filter_wrapper" style="max-width:960px;">
+	  <span style="color:#fff"><h2>What are you hungry for?</h2></span>
     <div class="filter selected" 	data-category="*">All</div>
     <div class="filter" 			data-category="American">American</div>
     <div class="filter" 			data-category="Asian">Asian</div>
