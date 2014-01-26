@@ -522,10 +522,11 @@
 							width:100%;
 						}
 
-.filter_wrapper			{	background:url(../assets/tiles/topgradient.png) repeat-x;
+.filter_wrapper			{	font-family: 'Open Sans', sans-serif;
+							background:url(../assets/tiles/topgradient.png) repeat-x;
 							background-color:#040404;
-							border-radius:20px; -moz-border-radius:20px; -webkit-border-radius:20px;
-							padding:0px 35px;
+							/*border-radius:20px; -moz-border-radius:20px; -webkit-border-radius:20px;*/
+							padding:0px 119px;
 							position:relative;
 							min-height:40px;
 							margin:auto;
@@ -542,7 +543,7 @@
 
 						}
 
-.filter								{	line-height:40px;margin-right:30px; font-size:14px; color:#999; float:left; font-weight:700; cursor:pointer}
+.filter								{	line-height:40px;margin-right:22px; font-size:14px; color:#999; float:left; font-weight:700; cursor:pointer}
 .filter:hover, .filter.selected		{	color:#fff;}
 .filter.last-child					{	margin-right:0px !important;}
 
