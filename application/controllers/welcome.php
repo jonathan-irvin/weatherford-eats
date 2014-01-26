@@ -19,16 +19,13 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		// TODO Import initial html or php and separate into separate views
-		// $data['title'] = "Beacon Tech Support Website";		
-		// $this->load->view('header',$data);
-		// $this->load->view('index_content');
-		// $this->load->view('footer');
-		
 		$header_data['title'] = "Weatherford Eats";
 		$restaurant_data['restaurants'] = $this->generate();
 		$this->load->view('header',$header_data);
+		$this->load->view('nav');
 		$this->load->view('restaurant_listings',$restaurant_data);
+		$this->load->view('settings');
+		$this->load->view('footer');
 	}
 	
 	private function generate()
@@ -41,6 +38,7 @@ class Welcome extends CI_Controller {
 		{			
 			$restaurants[] = $this->restaurant_output(
 				array(
+				'id'				=>$row->id,	
 				'name'				=>$row->name,	
 				'tags'				=>$row->tags,	
 				'menu_url'			=>$row->menu_url,
@@ -54,24 +52,44 @@ class Welcome extends CI_Controller {
 	
 	private function restaurant_output($params){			
 		
-		$name 			= $params['name'];
-		$tags			= $params['tags'];
-		$img			= $params['image'];
-		$menu_url		= $params['menu_url'];	
-		$description	= $params['description'];			
+		$id 				= $params['id'];
+		$name 				= $params['name'];
+		$tags				= $params['tags'];
+		$img				= $params['image'];
+		$menu_url			= $params['menu_url'];	
+		$description		= $params['description'];
+		
+		$colors				= array('mega-red','mega-turquoise','mega-green','mega-orange','mega-blue','mega-violet');
+		$chosen_color		= $colors[array_rand($colors)];
+		
+		$menu_output;
+		
+		if($menu_url != "#"){
+			$menu_output = "<a href=\"$menu_url\">See the Menu</a>";
+		}else{
+			$menu_output = "Menu Coming Soon";
+		}
+		
 	
-		return "<div class=\"element $tags tz_item\">
-                <div class=\"TzInner\">
-                  <div class=\"TzPortfolioMedia\"> <a href=\"$menu_url\" class=\"prettyPhoto\" rel=\"prettyPhoto[id]\"> <img src=\"$img\"/>
-                    <div class=\"TzPortfolioDescription\">
-                      <h3 class=\"TzPortfolioTitle name\" itemprop=\"name\"> <em>$name</em> </h3>
-                      <span class=\"TzItemTag\">$description</span>
-                      <div class=\"r_plus \"></div>
-                    </div>
-                    </a> </div>
-                </div>
-                <!--Inner--> 
-              </div>";
+		return "<!-- A GALLERY ENTRY -->
+				<div class=\"mega-entry $tags\" id=\"mega-entry-$id\" data-src=\"$img\" data-width=\"780\" data-height=\"585\" data-lowsize=\"\">
+				  <div class=\"mega-covercaption mega-square-bottom mega-landscape-right mega-portrait-bottom $chosen_color\"> 
+					<!-- The Content Part with Hidden Overflow Container -->
+					
+					<div class=\"mega-title\"><!--<img src=\"assets/images/icons/grid.png\" alt=\"\" style=\"float: left; padding-right: 15px;\"/>-->$name</div>
+					<div class=\"mega-date\">$menu_output</p></div>
+					<p>$description<br/></p>
+					<p>Tags: $tags</p>
+					  
+				  </div>
+				  
+				  <!-- The Link Buttons -->
+				  <div class=\"mega-coverbuttons\">
+					<div class=\"mega-link $chosen_color\"></div>
+					<a class=\"fancybox\" rel=\"group\" href=\"$img\" title=\"Photo\">
+					<div class=\"mega-view $chosen_color\"></div>
+					</a> </div>
+				</div>";
 	}
 	
 }
